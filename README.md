@@ -1,2 +1,2 @@
-# curriculo
+# Currículo
 Currículo Online - Vinícius Macacari
