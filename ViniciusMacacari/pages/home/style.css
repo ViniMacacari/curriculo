@@ -1,0 +1,87 @@
+/* Fontes */
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../../files/fonts/Rubik-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Italic';
+    src: url(../../files/fonts/Rubik-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url(../../files/fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Bold Italic';
+    src: url(../../files/fonts/Rubik-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Extra Bold';
+    src: url(../../files/fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik Extra Bold Italic';
+    src: url(../../files/fonts/Rubik-BoldItalic.ttf);
+}
+
+/* Fontes */
+
+/* Cabeçalho */
+
+body {
+   background-color: #ededed;
+   margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow:  18px 18px 36px #dadada, -18px -18px 36px #ffffff;
+}
+
+h3{
+    padding-left: 10px;
+    font-family: 'Rubik';
+    color: rgb(97, 97, 97);
+    cursor: default;
+}
+
+ul{
+    padding-right: 10px;
+}
+
+li, ul{
+    list-style: none;
+    display: inline-block;
+    font-family: 'Rubik Bold';
+    margin-left: 5vw;
+    font-size: clamp(0.8em, 1.1vw, 1em);
+}
+
+.guias {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 98, 155);
+    transition: font-size 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+}
+
+.guias:hover {
+    color: black;
+    transform: scale(1.1)!important ;
+}
+
+.guias:active{
+    transform: scale(1)!important ;
+}
+
+/* Cabeçalho */
