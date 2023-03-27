@@ -32,6 +32,29 @@
 
 /* Fontes */
 
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {   /* cor de fundo da barra do scroll */
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {   /* cor da barra do scroll */
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {   /* cor de destaque da barra do scroll */
+    background-color: #555;
+  }
+  
+
+/* Scroll */
+
 /* Cabeçalho */
 
 body {
