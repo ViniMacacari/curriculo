@@ -41,21 +41,30 @@ body {
 
 header{
     display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    background-color: #ededed;
     box-shadow:  18px 18px 36px #dadada, -18px -18px 36px #ffffff;
+    z-index: 9999;
+}
+
+a {
+    text-decoration: none;
 }
 
 h3{
-    padding-left: 10px;
+    padding-left: 45px;
     font-family: 'Rubik';
     color: rgb(97, 97, 97);
     cursor: default;
 }
 
 ul{
-    padding-right: 10px;
+    padding-right: 65px;
 }
 
 li, ul{
@@ -64,13 +73,14 @@ li, ul{
     font-family: 'Rubik Bold';
     margin-left: 5vw;
     font-size: clamp(0.8em, 1.1vw, 1em);
+    cursor: default;
 }
 
 .guias {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: rgb(0, 98, 155);
+    color: #00629b;
     transition: font-size 0.1s ease-in-out, transform 0.1s ease-in-out;
 
 }
@@ -85,3 +95,202 @@ li, ul{
 }
 
 /* Cabeçalho */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    height: calc(100vh - 90px);
+}
+
+.meio{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    line-height: 50%;
+}
+
+#imagem-inicio{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+#imagem-inicio:hover{
+    transform: translateY(5px);
+}
+
+.card {
+    display: flex;
+    align-items: flex-end;
+    width: 20em;
+    height: auto;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    margin: 50px;
+   }
+
+.lateral{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 0;
+    min-width: auto;
+}
+
+.img-lateral{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: clamp(1.8em, 1.8em, 0.9em);
+    transition: 0.2;
+    margin: 10px;
+}
+
+#saudacao-titulo{
+    font-family: 'Rubik Extra Bold';
+    line-height: 1.5;
+}
+
+#saudacao-subtitulo, #sobre-curto{
+    font-family: 'Rubik';
+}
+
+#saudacao-subtitulo{
+    font-size: 2vw;
+}
+
+#sobre-curto{
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+
+@media screen and (max-width: 850px) {
+    #sobre-curto {
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .content{
+        padding: 30px
+    }
+
+    div#scroll{
+        display: none;
+      }  
+  }
+
+@media screen and (max-width: 1300px) {
+    .lateral{
+        flex-direction: row;
+    }
+
+    .content{
+        padding: 30px
+    }
+    
+    div#scroll{
+        display: none;
+    }  
+}
+
+.div-butt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik Bold';
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    transition: all .5s ease;
+    z-index: 1;
+   }
+   
+   button:hover{
+    letter-spacing: 3px;
+    padding-right: 60px;
+    background-color: #00629b;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #005281 0px 7px 29px 0px;
+   }
+
+   button:hover img{
+    display: flex;
+    animation: slide-in .5s ease-in-out forwards;
+   }
+
+   @keyframes slide-in {
+        0%{
+            transform: translateX(150%);
+            opacity: 0;
+        }
+        
+        100%{
+            transform: translateX(222%);
+            opacity: 1;
+        }
+    }
+   
+   button:active {
+    letter-spacing: 3px;
+    background-color: #00629b;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #005281 0px 0px 0px 0px;
+    transform: translateY(5px);
+   }
+
+.img-but{
+    position: absolute;
+    width: 17px;
+    padding-left: 10px;
+    display: none;
+    transition: all .5s ease;
+    margin-bottom: 3px;
+}
+
+#scroll{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-mouse{
+    width: 30px;
+    height: 30px;
+}
+
+#scroll-text{
+    color: #00629b;
+    font-family: 'Rubik Bold';
+    cursor: default;
+}
